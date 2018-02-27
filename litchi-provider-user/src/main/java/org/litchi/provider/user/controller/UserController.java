@@ -35,6 +35,7 @@ public class UserController {
 	    return instance.getHomePageUrl();
 	}
 	
+	@SuppressWarnings("deprecation")
 	@GetMapping("/instance-info")
 	public ServiceInstance serviceUrlw() {
 		return discoveryClient.getLocalServiceInstance();

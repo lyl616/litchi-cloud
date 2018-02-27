@@ -16,6 +16,7 @@ public class MovieController {
 
 	@GetMapping("/movie/{id}")
 	public User findById(@PathVariable Long id) {
-		return this.restTemplate.getForObject("http://localhost:7900/user/find/" + id, User.class);
+		return this.restTemplate.getForObject("http://litchi-provider-user/find/" + id, User.class);
+//		return this.restTemplate.getForObject("http://localhost:7900/find/" + id, User.class);
 	}
 }
