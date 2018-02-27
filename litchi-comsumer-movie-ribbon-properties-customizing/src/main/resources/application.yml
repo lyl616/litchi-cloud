@@ -1,0 +1,15 @@
+server:
+  port: 8010
+spring:
+  application:
+    name: litchi-comsumer-movie-ribbon-properties-customizing
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://root:root@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+litchi-provider-user:
+  ribbon:
+#    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
