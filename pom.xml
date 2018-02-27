@@ -47,6 +47,5 @@
 		<module>litchi-eureka-server</module>
 		<module>litchi-provider-user</module>
 		<module>litchi-comsumer-movie</module>
-		<module>litchi-comsumer-movie-ribbon</module>
 	</modules>
 </project>
