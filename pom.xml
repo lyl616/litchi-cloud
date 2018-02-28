@@ -50,5 +50,6 @@
 		<module>litchi-comsumer-movie-ribbon</module>
 		<module>litchi-comsumer-movie-ribbon-properties-customizing</module>
 		<module>litchi-comsumer-movie-ribbon-without-eureka</module>
+		<module>litchi-comsumer-movie-feign</module>
 	</modules>
 </project>

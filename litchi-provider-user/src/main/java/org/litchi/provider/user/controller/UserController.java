@@ -7,17 +7,19 @@ import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.netflix.appinfo.InstanceInfo;
 import com.netflix.discovery.EurekaClient;
 
-@RestController 
+@RestController
 public class UserController {
 
 	@Autowired
 	private UserRepository userRepository;
-	
+
 	@Autowired
 	private EurekaClient eurekaClient;
 	@Autowired
@@ -28,13 +30,22 @@ public class UserController {
 		return this.userRepository.findOne(id);
 	}
 
-	
+	@PostMapping("/user")
+	public User postUser(@RequestBody User user) {
+		return user;
+	}
+
+	@PostMapping("/get-user")
+	public User getUser(User user) {
+		return user;
+	}
+
 	@GetMapping("/eureka-instance")
 	public String serviceUrl() {
-	    InstanceInfo instance = eurekaClient.getNextServerFromEureka("LITCHI-PROVIDER-USER", false);
-	    return instance.getHomePageUrl();
+		InstanceInfo instance = eurekaClient.getNextServerFromEureka("LITCHI-PROVIDER-USER", false);
+		return instance.getHomePageUrl();
 	}
-	
+
 	@SuppressWarnings("deprecation")
 	@GetMapping("/instance-info")
 	public ServiceInstance serviceUrlw() {

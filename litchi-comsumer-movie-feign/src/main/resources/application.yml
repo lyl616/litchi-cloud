@@ -2,7 +2,7 @@ server:
   port: 7910
 spring:
   application:
-    name: litchi-comsumer-movie
+    name: litchi-comsumer-movie-feign
 eureka:
   client:
     healthcheck:
