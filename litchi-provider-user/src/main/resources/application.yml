@@ -1,5 +1,5 @@
 server:
-  port: 7903
+  port: 7901
 spring:
   jpa:
     generate-ddl: false
@@ -13,7 +13,7 @@ spring:
     password: root
     driver-class-name: com.mysql.jdbc.Driver
   application:
-    name: litchi-provider-user2
+    name: litchi-provider-user
 logging:
   level:
     root: INFO
