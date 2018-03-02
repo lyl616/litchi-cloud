@@ -26,8 +26,8 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-	
-	
+
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -55,5 +55,6 @@
 		<module>litchi-eureka-server-ha</module>
 		<module>litchi-comsumer-movie-ribbon-with-hystrix</module>
 		<module>litchi-comsumer-movie-ribbon-with-hystrix-propagagion</module>
+		<module>litchi-comsumer-movie-feign-with-hystrix</module>
 	</modules>
 </project>

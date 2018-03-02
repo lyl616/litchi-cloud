@@ -1,8 +1,8 @@
 server:
-  port: 7910
+  port: 7911
 spring:
   application:
-    name: litchi-comsumer-movie-feign
+    name: litchi-comsumer-movie-feign-with-hystrix
 eureka:
   client:
     healthcheck:
