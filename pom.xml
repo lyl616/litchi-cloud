@@ -53,5 +53,6 @@
 		<module>litchi-comsumer-movie-feign</module>
 		<module>litchi-comsumer-movie-feign-customizing</module>
 		<module>litchi-eureka-server-ha</module>
+		<module>litchi-comsumer-movie-ribbon-with-hystrix</module>
 	</modules>
 </project>
