@@ -8,17 +8,20 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 
-@RestController
+@RestController 
 public class MovieController {
 
 	@Autowired
 	private RestTemplate restTemplate;
-
-	@HystrixCommand(fallbackMethod = "findUserFallBack")
+ 
+	@HystrixCommand(fallbackMethod = "findUserFallBack", 
+			commandProperties = @HystrixProperty(name = "execution.isolation.strategy", value = "SEMAPHORE"))
 	@GetMapping("/movie/{id}")
 	public User findById(@PathVariable Long id) {
 		return this.restTemplate.getForObject("http://litchi-provider-user/find/" + id, User.class);
+
 	}
 
 	public User findUserFallBack(Long id) {
@@ -26,5 +29,5 @@ public class MovieController {
 		user.setId(0l);
 		return user;
 	}
-
+ 
 }

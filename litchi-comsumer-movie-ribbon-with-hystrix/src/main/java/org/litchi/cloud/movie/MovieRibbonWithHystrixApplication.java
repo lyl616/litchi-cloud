@@ -13,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
 @EnableEurekaClient
 @RibbonClient(name = "litchi-provider-user")
 @EnableCircuitBreaker
-public class ConsumperMovieRibbonWithHystrixApplication {
+public class MovieRibbonWithHystrixApplication {
 
 	@Bean
 	@LoadBalanced
@@ -22,6 +22,6 @@ public class ConsumperMovieRibbonWithHystrixApplication {
 	}
 
 	public static void main(String[] args) {
-		SpringApplication.run(ConsumperMovieRibbonWithHystrixApplication.class, args);
+		SpringApplication.run(MovieRibbonWithHystrixApplication.class, args);
 	}
 }

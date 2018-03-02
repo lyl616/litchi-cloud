@@ -2,7 +2,7 @@ server:
   port: 8010
 spring:
   application:
-    name: litchi-comsumer-movie-ribbon-with-hystrix
+    name: litchi-comsumer-movie-ribbon-with-hystrix-propagation
 eureka:
   client:
     healthcheck:
