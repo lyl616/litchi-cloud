@@ -1,8 +1,8 @@
 server:
-  port: 7911
+  port: 8010
 spring:
   application:
-    name: litchi-comsumer-movie-feign-with-hystrix
+    name: litchi-comsumer-movie-feign-with-hystrix-factory
 eureka:
   client:
     healthcheck:
@@ -11,3 +11,6 @@ eureka:
       defaultZone: http://root:root@localhost:8761/eureka
   instance:
     prefer-ip-address: true
+feign:
+  hystrix:
+    enabled: true #这是一个坑，需要开启feign对hystrix的支持

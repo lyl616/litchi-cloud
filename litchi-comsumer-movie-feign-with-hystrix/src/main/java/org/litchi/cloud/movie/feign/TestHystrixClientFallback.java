@@ -4,7 +4,7 @@ import org.litchi.cloud.movie.bo.User;
 import org.springframework.stereotype.Component;
 
 @Component
-public class HystrixClientFallback implements UserFeignClient {
+public class TestHystrixClientFallback implements UserFeignClient {
 
 	@Override
 	public User findById(Long id) {
