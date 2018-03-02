@@ -56,5 +56,7 @@
 		<module>litchi-comsumer-movie-ribbon-with-hystrix</module>
 		<module>litchi-comsumer-movie-ribbon-with-hystrix-propagagion</module>
 		<module>litchi-comsumer-movie-feign-with-hystrix</module>
+		<module>litchi-comsumer-movie-feign-with-hystrix-factory</module>
+		<module>litchi-hystrix-dashboard</module>
 	</modules>
 </project>
