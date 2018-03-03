@@ -1,5 +1,5 @@
 server:
-  port: 8031
+  port: 8030
 spring:
   application:
     name: litchi-hystrix-turbine
@@ -10,7 +10,7 @@ eureka:
   instance:
     prefer-ip-address: true
 turbine:
-  aggregator:
-    clusterConfig: default
+#  aggregator:
+#    clusterConfig: default
   appConfig: litchi-comsumer-movie-ribbon-with-hystrix,litchi-comsumer-movie-feign-with-hystrix
   clusterNameExpression: "'default'"

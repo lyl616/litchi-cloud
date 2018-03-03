@@ -7,8 +7,8 @@ import org.springframework.cloud.netflix.turbine.EnableTurbine;
 
 @SpringBootApplication 
 @EnableTurbine
-public class LitchiHystrixTurBineApp {
+public class HystrixTurBineApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(LitchiHystrixTurBineApp.class, args);
+		SpringApplication.run(HystrixTurBineApplication.class, args);
 	}
 }
