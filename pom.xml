@@ -58,5 +58,6 @@
 		<module>litchi-comsumer-movie-feign-with-hystrix</module>
 		<module>litchi-comsumer-movie-feign-with-hystrix-factory</module>
 		<module>litchi-hystrix-dashboard</module>
+		<module>litchi-hystrix-turbine</module>
 	</modules>
 </project>

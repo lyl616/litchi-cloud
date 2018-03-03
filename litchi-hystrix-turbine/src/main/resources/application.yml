@@ -1,0 +1,16 @@
+server:
+  port: 8031
+spring:
+  application:
+    name: litchi-hystrix-turbine
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://root:root@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+turbine:
+  aggregator:
+    clusterConfig: default
+  appConfig: litchi-comsumer-movie-ribbon-with-hystrix,litchi-comsumer-movie-feign-with-hystrix
+  clusterNameExpression: "'default'"
