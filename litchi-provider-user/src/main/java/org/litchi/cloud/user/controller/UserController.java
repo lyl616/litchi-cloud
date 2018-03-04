@@ -1,5 +1,7 @@
 package org.litchi.cloud.user.controller;
 
+import java.math.BigDecimal;
+
 import org.litchi.cloud.user.entity.User;
 import org.litchi.cloud.user.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +26,11 @@ public class UserController {
 	private EurekaClient eurekaClient;
 	@Autowired
 	private DiscoveryClient discoveryClient;
+
+	@GetMapping("/default-user")
+	public User defaultUser() {
+		return new User(-999l, "SpringCloud", "SpringCloudTest", (short) 99, new BigDecimal(999));
+	}
 
 	@GetMapping("/find/{id}")
 	public User findUser(@PathVariable Long id) {

@@ -6,8 +6,8 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 @SpringBootApplication 
 @EnableZuulProxy
-public class LitchiGatewayZuulation {
+public class LitchiGatewayZuuApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(LitchiGatewayZuulation.class, args);
+		SpringApplication.run(LitchiGatewayZuuApplication.class, args);
 	}
 }

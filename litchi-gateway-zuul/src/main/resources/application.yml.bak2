@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: litchi-gateway-zuul
+server:
+  port: 8040
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:root@localhost:8761/eureka
+      
+     
+#  01   ignoredServices  过滤所有服务  只开启user和movie
+#zuul:
+#  ignoredServices: '*'
+#  routes: 
+#    litchi-provider-user: /user/**
+#    litchi-comsumer-movie-ribbon-with-hystrix: /movie/**
+
+ 
+#  02 开启所有服务 只对user 进行特殊配置
+#zuul:
+#  routes:
+#    litchi-provider-user: /user/** 
+    
+    
+# 03 .独立地指定路径和serviceId或者 url：
+zuul:
+  routes:
+    testUser:
+      path: /user/**
+      serviceId: litchi-provider-user
+    testMovie:
+      path: /movie/**
+      serviceId: litchi-comsumer-movie-ribbon-with-hystrix
