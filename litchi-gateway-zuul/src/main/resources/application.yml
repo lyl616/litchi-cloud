@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: litchi-gateway-zuul
+server:
+  port: 8040
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:root@localhost:8761/eureka
+zuul:
+#  ignoredServices: '*'
+  routes:
+    litchi-provider-user: /user/**
+    litchi-comsumer-movie-ribbon-with-hystrix: /movie/**
