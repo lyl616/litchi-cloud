@@ -15,3 +15,7 @@ eureka:
     health-check-url: ${management.context-path}/health
 #    home-page-url: /ribbon
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000
+
+management:
+  security:
+    enabled: false

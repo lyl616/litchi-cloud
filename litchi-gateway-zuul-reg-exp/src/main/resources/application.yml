@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: litchi-gateway-zuul-reg-exp
+server:
+  port: 8040
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:root@localhost:8761/eureka

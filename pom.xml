@@ -45,19 +45,21 @@
 
 	<modules>
 		<module>litchi-eureka-server</module>
+		<module>litchi-eureka-server-ha</module>
 		<module>litchi-provider-user</module>
 		<module>litchi-comsumer-movie</module>
 		<module>litchi-comsumer-movie-ribbon</module>
-		<module>litchi-comsumer-movie-ribbon-properties-customizing</module>
 		<module>litchi-comsumer-movie-ribbon-without-eureka</module>
+		<module>litchi-comsumer-movie-ribbon-properties-customizing</module>
+		<module>litchi-comsumer-movie-ribbon-with-hystrix-propagagion</module>
 		<module>litchi-comsumer-movie-feign</module>
 		<module>litchi-comsumer-movie-feign-customizing</module>
-		<module>litchi-eureka-server-ha</module>
 		<module>litchi-comsumer-movie-ribbon-with-hystrix</module>
-		<module>litchi-comsumer-movie-ribbon-with-hystrix-propagagion</module>
 		<module>litchi-comsumer-movie-feign-with-hystrix</module>
 		<module>litchi-comsumer-movie-feign-with-hystrix-factory</module>
 		<module>litchi-hystrix-dashboard</module>
 		<module>litchi-hystrix-turbine</module>
+		<module>litchi-gateway-zuul</module>
+		<module>litchi-gateway-zuul-reg-exp</module>
 	</modules>
 </project>
