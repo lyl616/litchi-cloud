@@ -49,11 +49,21 @@ management:
 #为此，请指定service-route并为serviceId配置Ribbon客户端（目前需要在Ribbon中禁用Eureka支持：详见上文），例如
 
 zuul:
-  prefix: /find
-  strip-prefix: false
-logging:
-  level:
-    com.netflix: debug
- 
+  routes:
+    testUser:
+      path: /user/**
+      serviceId: litchi-provider-user
+    testMovie:
+      path: /movie/**
+      serviceId: litchi-comsumer-movie-ribbon-with-hystrix
+ribbon:
+  eureka:
+    enabled: false
+litchi-provider-user:  # 这里是serviceId 
+  ribbon:
+    listOfServers: http://localhost:7900,http://localhost:7901
+litchi-comsumer-movie-ribbon-with-hystrix:  # 这里是serviceId 
+  ribbon:
+    listOfServers: http://localhost:8010,http://localhost:8011
   
       
