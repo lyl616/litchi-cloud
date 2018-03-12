@@ -3,3 +3,6 @@ server:
 spring:
   application:
     name: litchi-hystrix-dashboard
+management:
+  security:
+    enabled: false #spring boot 1.5 开始，默认为actuator开启了安全保护

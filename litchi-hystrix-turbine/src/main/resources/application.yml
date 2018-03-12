@@ -14,3 +14,6 @@ turbine:
 #    clusterConfig: default
   appConfig: litchi-comsumer-movie-ribbon-with-hystrix,litchi-comsumer-movie-feign-with-hystrix
   clusterNameExpression: "'default'"
+management:
+  security:
+    enabled: false #spring boot 1.5 开始，默认为actuator开启了安全保护

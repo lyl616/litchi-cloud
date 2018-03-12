@@ -21,7 +21,9 @@ logging:
     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
     org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
     com.itmuch: DEBUG
-
+management:
+  security:
+    enabled: false #spring boot 1.5 开始，默认为actuator开启了安全保护
 eureka:
   client:
     serviceUrl:

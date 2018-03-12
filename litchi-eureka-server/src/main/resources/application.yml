@@ -14,3 +14,6 @@ security:
   user:
     name: root
     password: root
+management:
+  security:
+    enabled: false #spring boot 1.5 开始，默认为actuator开启了安全保护

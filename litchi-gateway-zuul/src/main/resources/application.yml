@@ -7,7 +7,9 @@ eureka:
   client:
     service-url:
       defaultZone: http://root:root@localhost:8761/eureka
-      
+management:
+  security:
+    enabled: false #spring boot 1.5 开始，默认为actuator开启了安全保护     
      
 #  01   ignoredServices  过滤所有服务  只开启user和movie
 #zuul:

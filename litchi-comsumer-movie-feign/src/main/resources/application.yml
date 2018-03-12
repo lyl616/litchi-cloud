@@ -11,3 +11,6 @@ eureka:
       defaultZone: http://root:root@localhost:8761/eureka
   instance:
     prefer-ip-address: true
+management:
+  security:
+    enabled: false #spring boot 1.5 开始，默认为actuator开启了安全保护

@@ -1,7 +1,7 @@
 spring:
   application:
     name: litchi-eureka-server-ha
- 
+
 ---
 server:
   port: 8761
