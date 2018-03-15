@@ -1,19 +1,12 @@
 spring:
   application:
-    name: litchi-gateway-zuul
+    name: litchi-sidecar
 server:
-  port: 8040
+  port: 8070
 eureka:
   client:
     service-url:
       defaultZone: http://root:root@localhost:8761/eureka
-management:
-  security:
-    enabled: false #spring boot 1.5 开始，默认为actuator开启了安全保护 
-hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
-ribbon:
-  ConnectTimeout: 3000
-  ReadTimeout: 60000
-logging:
-  level:
-    com.netflix: debug
+sidecar:
+  port: 8000
+  health-uri: http://localhost:8000/health.json 
