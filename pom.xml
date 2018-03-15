@@ -60,6 +60,9 @@
 		<module>litchi-hystrix-dashboard</module>
 		<module>litchi-hystrix-turbine</module>
 		<module>litchi-gateway-zuul</module>
+		<module>litchi-gateway-zuul-fallback</module>
 		<module>litchi-gateway-zuul-reg-exp</module>
+		<module>litchi-comsumer-file-upload</module>
+		<module>litchi-sidecar</module>
 	</modules>
 </project>

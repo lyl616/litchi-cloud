@@ -1,0 +1,59 @@
+spring:
+  application:
+    name: litchi-gateway-zuul
+server:
+  port: 8040
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:root@localhost:8761/eureka
+management:
+  security:
+    enabled: false #spring boot 1.5 开始，默认为actuator开启了安全保护     
+     
+#  01   ignoredServices  过滤所有服务  只开启user和movie
+#zuul:
+#  ignoredServices: '*'
+#  routes: 
+#    litchi-provider-user: /user/**
+#    litchi-comsumer-movie-ribbon-with-hystrix: /movie/**
+
+ 
+#  02 开启所有服务 只对user 进行特殊配置
+#zuul:
+#  routes:
+#    litchi-provider-user: /user/** 
+    
+    
+# 03 .独立地指定路径和serviceId或者 url：
+#zuul:
+#  routes:
+#    testUser:
+#      path: /user/**
+#      serviceId: litchi-provider-user
+#    testMovie:
+#      path: /movie/**
+#      serviceId: litchi-comsumer-movie-ribbon-with-hystrix
+      
+# 04 .独立地指定路径和 url：     
+#zuul:
+#  routes:
+#    testUser:
+#      path: /user/**
+#      url: http://localhost:7900/
+#    testMovie:
+#      path: /movie/**
+#      url: http://peer1:8010/
+
+#URL路由不会被执行为HystrixCommand，也不能使用Ribbon对多个URL进行负载平衡。
+#为此，请指定service-route并为serviceId配置Ribbon客户端（目前需要在Ribbon中禁用Eureka支持：详见上文），例如
+
+zuul:
+  prefix: /find
+  strip-prefix: false
+logging:
+  level:
+    com.netflix: debug
+ 
+  
+      
