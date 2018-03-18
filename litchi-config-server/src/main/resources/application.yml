@@ -7,7 +7,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/startSnow/open-cloud
+          uri: https://github.com/lyl616/litchi-springcloud-config.git
           search-paths: /src/main/resources/
   profiles:
     active: prod
