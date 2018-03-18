@@ -65,5 +65,7 @@
 		<module>litchi-gateway-zuul-reg-exp</module>
 		<module>litchi-comsumer-file-upload</module>
 		<module>litchi-sidecar</module>
+		<module>litchi-config-server</module>
+		<module>litchi-config-client</module>
 	</modules>
 </project>
