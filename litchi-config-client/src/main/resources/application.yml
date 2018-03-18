@@ -1,16 +1,10 @@
-server:
+Fserver:
   port: 8180
 spring:
   application:
-    name: litchi-config-server
+    name: litchi-config-client
   cloud:
     config:
       server:
         git:
           uri: https://github.com/spring-cloud-samples/config-repo
-#eureka:
-#  client:
-#    serviceUrl:
-#      defaultZone: http://root:root@localhost:8761/eureka
-#  instance:
-#    prefer-ip-address: true
